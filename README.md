@@ -159,7 +159,7 @@ Para ejecutar pruebas, considera utilizar Mocha y Chai. A continuación, una con
 |       error.handler.js       
 |
 \---src
-    \---student
+    \---contacts
             controller.js
             queries.js
             routes.js
