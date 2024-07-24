@@ -1,10 +1,9 @@
 {
-    "name": "Postgre-Database-TIC",
-    "dockerComposeFile": "doUse 'customizations/vscode/extensions' docker-compose.yml",
-    "service": "app",
-    "workspaceFolder": "/workspace",
-    
-  // Usar 'customizations' para definir las extensiones de VS Code a instalar.
+  "name": "Postgre-Database-TIC",
+  "overrideCommand": false,
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -15,23 +14,14 @@
         "ms-azuretools.vscode-docker",
         "ms-vsliveshare.vsliveshare",
         "prisma.prisma"
-      ]
-    },
-    "settings": {
-            "terminal.integrated.shell.linux": "/bin/bash",
-            "editor.formatOnSave": true,
-            "extensions.verifySignature": false
+      ],
+      "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "editor.formatOnSave": true
+  }
     }
   },
-
-  
-    // Use 'forwardPorts' to make a list of ports inside the container available locally.
-    "forwardPorts": [3000, 5432],
-  
-    // Use 'postCreateCommand' to run commands after the container is created.
-    "postCreateCommand": "npm install",
-  
-    // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-    "remoteUser": "node"
-  }
-  
+  "forwardPorts": [3000, 5432],
+  "postCreateCommand": "npm install",
+  "remoteUser": "node"
+}
