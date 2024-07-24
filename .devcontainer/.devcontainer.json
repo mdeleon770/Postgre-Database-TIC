@@ -1,6 +1,6 @@
 {
     "name": "Postgre-Database-TIC",
-    "dockerComposeFile": "doUse 'customizations/vscode/extensions' icker-compose.yml",
+    "dockerComposeFile": "doUse 'customizations/vscode/extensions' docker-compose.yml",
     "service": "app",
     "workspaceFolder": "/workspace",
     
@@ -19,7 +19,8 @@
     },
     "settings": {
             "terminal.integrated.shell.linux": "/bin/bash",
-            "editor.formatOnSave": true
+            "editor.formatOnSave": true,
+            "extensions.verifySignature": false
     }
   },
 
