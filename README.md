@@ -16,6 +16,8 @@ En este proyecto, desarrollamos un sistema CRM (Customer Relationship Management
 
 ## Tecnologías Utilizadas
 
+- **Editor de texto**: [Visual Studio Code](https://code.visualstudio.com/)
+- **Control de versiones**:
 - **Backend**: Node.js, Express
 - **Base de Datos**: PostgreSQL
 - **Frontend**: JavaScript
