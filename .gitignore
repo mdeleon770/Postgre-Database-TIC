@@ -1,0 +1,31 @@
+# Node.js dependencies
+node_modules/
+
+# npm package-lock file
+package-lock.json
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Environment variables
+.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.vscode/
+.idea/
+*.swp
+
+# Build output
+dist/
+build/
+*.tgz
+*.gz
+
+# Optional: local directories for some tools
+coverage/
