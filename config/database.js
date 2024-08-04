@@ -6,11 +6,11 @@ require('dotenv').config();
 
 // Configure the connection pool
 const pool = new Pool({
-  user: process.env.DB_USER || 'postgres', // default username
-  host: process.env.DB_HOST || 'localhost', // default host
-  database: process.env.DB_NAME || 'postgres', // default database name
-  password: process.env.DB_PASSWORD || 'postgres', // default password
-  port: process.env.DB_PORT || 5432, // default port
+  user: 'postgres', // default username
+  host: 'localhost', // default host
+  database: 'postgres', // default database name
+  password: 'postgres', // default password
+  port: 5432, // default port
 });
 
 // Handle connection errors

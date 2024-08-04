@@ -1,0 +1,1 @@
+// ID de contacto, Tipo de contacto, Tipo de interaccion (Llamadas, ventas, reuniones, mails), Fecha de interaccion, Descripcion de interaccion 

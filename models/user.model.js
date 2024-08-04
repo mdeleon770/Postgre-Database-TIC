@@ -1,0 +1,1 @@
+// Nombre de usuario, Contraseña, Correo electronico, rol, (Generación automática de ID de usuario)

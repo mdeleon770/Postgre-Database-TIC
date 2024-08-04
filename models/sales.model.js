@@ -1,0 +1,1 @@
+// ID de contacto, Tipo de contacto, Cantidad, Producto, Precio, Fecha de venta, Descripcion de venta, (Generación automática de ID de venta)
