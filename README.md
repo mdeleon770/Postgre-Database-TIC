@@ -1,8 +1,10 @@
 
 # Postgre-Database-TIC
 
+## Integrantes
 - Alexis Este 
 - Manuel De Leon
+- Juan Montes
 
 ## Descripción del Proyecto
 
