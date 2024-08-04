@@ -1,19 +1,12 @@
 {
   "name": "My Development Container",
   "dockerComposeFile": "docker-compose.yml",
-  "service": "web",  // Replace 'web' with the name of the service you want to use as the main development environment, e.g., 'web' or 'app'
-  "workspaceFolder": "/workspace",  // Path in the container to your workspace
+  "service": "web", // Replace 'web' with the name of the service you want to use as the main development environment, e.g., 'web' or 'app'
+  "workspaceFolder": "/workspace", // Path in the container to your workspace
   "forwardPorts": [
-    5432,   // Forward PostgreSQL port
-    5050    // Forward pgAdmin port
+    5432, // Forward PostgreSQL port
+    5050 // Forward pgAdmin port
   ],
-  "extensions": [
-    "ms-azuretools.vscode-docker",  // Docker extension for VSCode
-    "ms-python.python"               // Python extension if needed
-  ],
-  "settings": {
-    "terminal.integrated.shell.linux": "/bin/bash"
-  },
-  "postCreateCommand": "npm install",  // Replace with any commands needed after container creation
-  "remoteUser": "vscode"               // Ensure the container user matches VS Code user
+  "postCreateCommand": "npm install", // Replace with any commands needed after container creation
+  "remoteUser": "vscode" // Ensure the container user matches VS Code user
 }
