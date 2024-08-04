@@ -27,6 +27,9 @@ services:
       - "5050:80"
     volumes:
       - pgadmin-data:/var/lib/pgadmin
+    networks:
+      custom_network:
+        ipv4_address: 172.19.0.3
 
 networks:
   custom_network:
