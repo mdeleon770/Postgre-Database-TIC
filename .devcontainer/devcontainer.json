@@ -1,6 +1,6 @@
 {
     "name": "Postgre-Database-TIC",
-    "dockerComposeFile": "docker-compose.yml",
+    "dockerComposeFile": "../docker-compose.yml",
     "service": "db",
     "workspaceFolder": "/workspace",
     "customizations": {
