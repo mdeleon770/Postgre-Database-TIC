@@ -5,6 +5,7 @@
 - Alexis Este 
 - Manuel De Leon
 - Juan Montes
+- Veronica Chacon
 
 ## Descripción del Proyecto
 
