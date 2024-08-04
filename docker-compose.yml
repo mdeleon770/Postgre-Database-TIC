@@ -9,7 +9,8 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ./db-data:/var/lib/postgresql/data
+      - db-data:/var/lib/postgresql/data
+    user: "${UID}:${GID}"
     networks:
       custom_network:
         ipv4_address: 172.19.0.2
@@ -26,7 +27,7 @@ services:
     ports:
       - "5050:80"
     volumes:
-      - ./pgadmin-data:/var/lib/pgadmin
+      - pgadmin-data:/var/lib/pgadmin
     networks:
       custom_network:
         ipv4_address: 172.19.0.3
