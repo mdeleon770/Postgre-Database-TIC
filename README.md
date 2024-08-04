@@ -1,7 +1,8 @@
 
 # Postgre-Database-TIC
 
-Alexis Este 
+- Alexis Este 
+- Manuel De Leon
 
 ## Descripción del Proyecto
 
