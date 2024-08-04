@@ -1,6 +1,8 @@
 
 # Postgre-Database-TIC
 
+Alexis Este 
+
 ## Descripción del Proyecto
 
 En este proyecto, desarrollamos un sistema CRM (Customer Relationship Management) para una organización. Integraremos una base de datos con una cantidad significativa de datos generados usando Faker, con el objetivo de ofrecer una propuesta sólida de gestión de clientes para la organización.
