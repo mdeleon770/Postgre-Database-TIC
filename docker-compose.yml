@@ -10,7 +10,6 @@ services:
       - "5432:5432"
     volumes:
       - db-data:/var/lib/postgresql/data
-    user: "${UID}:${GID}"
     networks:
       custom_network:
         ipv4_address: 172.19.0.2
