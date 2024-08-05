@@ -27,6 +27,10 @@ sudo docker cp $PGADMIN_IMPORT_DIR/. $PGADMIN_CONTAINER_NAME:/var/lib/pgadmin
 echo "Changing ownership of imported pgAdmin data..."
 docker exec -u root $PGADMIN_CONTAINER_NAME chown -R pgadmin:pgadmin /var/lib/pgadmin
 
+# Change permissions of the pgadmin4.db file
+echo "Changing permissions of pgadmin4.db..."
+docker exec -u root $PGADMIN_CONTAINER_NAME chmod 600 /var/lib/pgadmin/pgadmin4.db
+
 # Debugging: Check the contents of the pgAdmin directory within the container
 echo "Checking imported pgAdmin data..."
 docker exec $PGADMIN_CONTAINER_NAME ls -l /var/lib/pgadmin
