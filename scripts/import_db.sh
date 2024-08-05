@@ -11,6 +11,6 @@ PG_CONTAINER_NAME=$(docker ps --filter "name=${PG_SERVICE_NAME}" --format "{{.Na
 
 # Import PostgreSQL data
 echo "Importing PostgreSQL data..."
-cat $PG_IMPORT_DIR/$PG_IMPORT_FILE | docker exec -i $PG_CONTAINER_NAME psql -U $PG_POSTGRES_USER
+cat ./scripts/postgres_export/dump.sql | docker exec -i $PG_CONTAINER_NAME psql -U $PG_POSTGRES_USER
 
 echo "PostgreSQL data has been imported from ${PG_IMPORT_DIR}/${PG_IMPORT_FILE}."
