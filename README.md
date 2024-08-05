@@ -18,6 +18,12 @@ Para contribuir al proyecto, sigue estos pasos:
 3. Realiza tus cambios y realiza commits (`git commit -m 'Funcionalidad añadida en archivo.js'`).
 4. Empuja tus cambios al repositorio fork (`git push`).
 5. Crea un pull request en GitHub hacia el repositorio fuente.
+6. *De hacer cambios en la base de datos ejecutar* `./scripts/export_db.sh`
+
+    - **Email PgAdmin**: admin@mail.com
+    - **Contaseña**: root
+    - **Contraseña DB**: postgres
+
 ## Equipo de Desarrollo
 
 - **Juan Montes**
