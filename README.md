@@ -15,10 +15,11 @@ Para contribuir al proyecto, sigue estos pasos:
 
 1. Crea un fork del repositorio.
 2. Crea un codespace para tu fork del repositorio.
-3. Realiza tus cambios y realiza commits (`git commit -m 'Funcionalidad añadida en archivo.js'`).
-4. Empuja tus cambios al repositorio fork (`git push`).
-5. Crea un pull request en GitHub hacia el repositorio fuente.
-6. *De hacer cambios en la base de datos ejecutar* `./scripts/export_db.sh`
+3. *De hacer cambios en la base de datos ejecutar* `./scripts/export_db.sh`
+4. Realiza tus cambios y realiza commits (`git commit -m 'Funcionalidad añadida en archivo.js'`).
+5. Empuja tus cambios al repositorio fork (`git push`).
+6. Crea un pull request en GitHub hacia el repositorio fuente.
+
 
     - **Email PgAdmin**: admin@mail.com
     - **Contaseña**: root
