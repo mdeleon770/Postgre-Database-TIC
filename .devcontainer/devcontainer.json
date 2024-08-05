@@ -5,7 +5,6 @@
                 "dbaeumer.vscode-eslint",
                 "esbenp.prettier-vscode",
                 "pkief.material-icon-theme",
-                "github.copilot",
                 "christian-kohler.path-intellisense"
 
             ],
