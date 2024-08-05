@@ -3,7 +3,7 @@
 FROM node:18
 
 # Create and change to the app directory.
-WORKDIR /workspace
+WORKDIR /workspaces/Postgre-Database-TIC
 
 # Copy application dependency manifests to the container image.
 COPY package*.json ./
