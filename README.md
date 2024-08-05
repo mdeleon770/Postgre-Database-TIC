@@ -1,178 +1,78 @@
-
 # Postgre-Database-TIC
 
-## Integrantes
-- Alexis Este 
-- Manuel De Leon
-- Juan Montes
-- Veronica Chacon
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-## Descripción del Proyecto
+## Descripción
 
-En este proyecto, desarrollamos un sistema CRM (Customer Relationship Management) para una organización. Integraremos una base de datos con una cantidad significativa de datos generados usando Faker, con el objetivo de ofrecer una propuesta sólida de gestión de clientes para la organización.
+**Postgre-Database-TIC** es un proyecto universitario que busca implementar un sistema de CRM (Customer Relationship Management) utilizando una base de datos PostgreSQL. Este sistema gestiona la información de una organización, ofreciendo funcionalidades como gestión de contactos, seguimiento de interacciones, historial de actividades, gestión de ventas, automatización básica y generación de reportes.
 
-## Características
+## Desarrollo y Colaboración
 
-- **Gestión de contactos**: Añade, edita y elimina información de contacto.
-- **Seguimiento de interacciones**: Registra y visualiza interacciones con los clientes.
-- **Historial de actividades**: Consulta actividades pasadas con clientes.
-- **Gestión de ventas**: Realiza un seguimiento del progreso de ventas.
-- **Automatización básica**: Automatiza tareas repetitivas para mejorar la eficiencia.
-- **Reporting básico**: Genera informes básicos para el análisis de datos.
+Para contribuir al proyecto, sigue estos pasos:
 
-## Tecnologías Utilizadas
+1. Crea un fork del repositorio.
+2. Crea un codespace para tu fork del repositorio.
+3. Realiza tus cambios y realiza commits (`git commit -m 'Funcionalidad añadida en archivo.js'`).
+4. Empuja tus cambios al repositorio fork (`git push`).
+5. Crea un pull request en GitHub hacia el repositorio fuente.
+## Equipo de Desarrollo
 
-- **Editor de texto**: [Visual Studio Code](https://code.visualstudio.com/)
-- **Control de versiones**:
-- **Backend**: Node.js, Express
-- **Base de Datos**: PostgreSQL
-- **Frontend**: JavaScript
-- **Otras Librerías**: 
-  - **Faker**: Generación de datos ficticios
-  - **Boom**: Manejo de errores HTTP
-  - **Pool**: Conexión a la base de datos PostgreSQL
+- **Juan Montes**
+- **Alexis Este**
+- **Verónica Chacón**
+- **Manuel de León**
+
+## Funcionalidades
+
+- **Gestión de contactos**: CRUD de contactos con campos como nombre, correo, teléfono, dirección, etc.
+- **Seguimiento de interacciones**: Registro y manejo de interacciones con los clientes, como llamadas y correos electrónicos.
+- **Historial de actividades**: Seguimiento del historial de interacciones y actividades de los clientes.
+- **Gestión de ventas**: Creación y manejo de oportunidades de venta y su progreso.
+- **Automatización básica**: Tareas automatizadas para mejorar la eficiencia del sistema.
+- **Reporting básico**: Generación de reportes sobre diferentes aspectos del CRM.
+
+## Tecnologías
+
+El proyecto utiliza las siguientes tecnologías y herramientas:
+
+- **PostgreSQL**: Base de datos relacional para almacenar datos de CRM.
+- **Node.js**: Entorno de ejecución para construir la aplicación de servidor.
+- **Express**: Framework para desarrollar aplicaciones web con Node.js.
+- **JavaScript**: Lenguaje de programación principal para la lógica del servidor.
+- **Faker**: Biblioteca para generar datos de prueba y simulación.
+- **Boom**: Biblioteca para manejar errores HTTP.
+- **Pool**: Para la conexión eficiente a la base de datos PostgreSQL.
+
+
+### Explicación de la Estructura
+
+- **config**: Configuración de la base de datos y otros aspectos del entorno.
+- **middlewares**: Funciones de middleware para manejar errores y autenticación.
+- **controllers**: Controladores que manejan las solicitudes HTTP y ejecutan la lógica de negocio.
+- **models**: Modelos que representan las entidades y realizan operaciones en la base de datos.
+- **routes**: Define los endpoints de la API y asocia rutas con controladores.
+- **services**: Implementa la lógica de negocio y operaciones sobre los datos.
+- **utils**: Utilidades y funciones auxiliares.
 
 ## Instalación
 
-Sigue los siguientes pasos para instalar y configurar el proyecto en tu entorno local:
-
-1. **Clonar el repositorio**
-
-   ```bash
-   git clone https://github.com/tu-usuario/Postgre-Database-TIC.git
-   cd Postgre-Database-TIC
-   ```
-
-2. **Instalar Node.js**
-
-   Visita el siguiente enlace para descargar e instalar Node.js:
-
-   [Descargar Node.js](https://nodejs.org/)
-
-3. **Instalar PostgreSQL**
-
-   Visita el siguiente enlace para descargar e instalar PostgreSQL:
-
-   [Descargar PostgreSQL](https://www.postgresql.org/download/)
-
-4. **Instalar dependencias**
-
-   Ejecuta el siguiente comando en la raíz del proyecto para instalar las dependencias necesarias:
-
-   ```bash
-   npm install
-   ```
-
-5. **Configurar la base de datos**
-
-   Crea un archivo `.env` en la raíz del proyecto y configura tus variables de entorno. Asegúrate de incluir los detalles de conexión de la base de datos PostgreSQL:
-
-   ```plaintext
-   DB_HOST=localhost
-   DB_USER=tu_usuario
-   DB_PASSWORD=tu_contraseña
-   DB_NAME=nombre_de_la_base_de_datos
-   DB_PORT=5432
-   ```
+Proceso automatizado.
 
 ## Uso
 
-Para iniciar el servidor, ejecuta el siguiente comando:
+La aplicación estará disponible en `http://localhost:3000` por defecto. Puedes realizar solicitudes a los endpoints definidos para interactuar con el sistema CRM.
 
-```bash
-npm start
-```
+### Endpoints Principales
 
-El servidor estará disponible en `http://localhost:3000`.
-
-### Endpoints
-
-- **GET /contacts**: Obtén una lista de contactos.
-- **POST /contacts**: Crea un nuevo contacto.
-- **PUT /contacts/:id**: Actualiza un contacto existente.
-- **DELETE /contacts/:id**: Elimina un contacto.
-
-## Contribución
-
-Este es un proyecto universitario y no está abierto para contribuciones externas en este momento. Si deseas contribuir, por favor contacta a los autores del proyecto.
+- **Contactos**: `/api/contacts`
+- **Interacciones**: `/api/interactions`
+- **Ventas**: `/api/sales`
+- **Reportes**: `/api/reports`
 
 ## Licencia
 
-Este proyecto es privado y no está disponible para su distribución pública.
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-## Autores
-
-- Juan Montes
-- Alexis Este
-- Verónica Chacón
-- Manuel de León
-
-## Pruebas
-
-Para ejecutar pruebas, considera utilizar Mocha y Chai. A continuación, una configuración básica de ejemplo:
-
-1. **Instalar Mocha y Chai**
-
-   ```bash
-   npm install mocha chai --save-dev
-   ```
-
-2. **Crear un archivo de prueba**
-
-   Crea un archivo `test.js` en la raíz del proyecto y añade pruebas básicas:
-
-   ```javascript
-   const chai = require('chai');
-   const expect = chai.expect;
-
-   describe('Ejemplo de prueba', function() {
-     it('Debería devolver verdadero', function() {
-       expect(true).to.be.true;
-     });
-   });
-   ```
-
-3. **Ejecutar pruebas**
-
-   Añade el siguiente script a tu archivo `package.json` para ejecutar las pruebas:
-
-   ```json
-   "scripts": {
-     "test": "mocha test.js"
-   }
-   ```
-
-   Luego, ejecuta las pruebas con el comando:
-
-   ```bash
-   npm test
-   ```
-
-## Documentación Adicional
-
-- [Documentación de Node.js](https://nodejs.org/en/docs/)
-- [Documentación de Express](https://expressjs.com/en/4x/api.html)
-- [Documentación de PostgreSQL](https://www.postgresql.org/docs/)
-- [Documentación de Pool](https://node-postgres.com/features/pooling)
-
-### Estructura del Proyecto
-
-```
-|   db.js
-|   package-lock.json
-|   package.json
-|   server.js
-|
-+---middlewares
-|       error.handler.js       
-|
-\---src
-    \---contacts
-            controller.js
-            queries.js
-            routes.js
-```
-
-Esta estructura organiza el proyecto para una fácil navegación y gestión del código.
-
----
