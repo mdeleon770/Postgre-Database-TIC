@@ -41,5 +41,5 @@ networks:
           gateway: 172.19.0.1
 
 volumes:
-  db-data: {}
-  pgadmin-data: {}
+  db-data:
+  pgadmin-data:

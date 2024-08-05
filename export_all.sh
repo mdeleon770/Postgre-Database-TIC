@@ -6,7 +6,7 @@ PG_POSTGRES_USER=postgres
 PG_EXPORT_FILE=dump.sql
 PG_EXPORT_DIR=postgres_export
 
-PGADMIN_VOLUME_NAME=pgadmin-data
+PGADMIN_SERVICE_NAME=pgadmin
 PGADMIN_EXPORT_DIR=pgadmin_export
 
 # Create export directories if they don't exist
@@ -20,10 +20,20 @@ PG_CONTAINER_NAME=$(docker ps --filter "name=${PG_SERVICE_NAME}" --format "{{.Na
 echo "Exporting PostgreSQL data..."
 docker exec -t $PG_CONTAINER_NAME pg_dumpall -c -U $PG_POSTGRES_USER > $PG_EXPORT_DIR/$PG_EXPORT_FILE
 
+# Find the pgAdmin container name dynamically
+PGADMIN_CONTAINER_NAME=$(docker ps --filter "name=${PGADMIN_SERVICE_NAME}" --format "{{.Names}}" | head -n 1)
+
 # Export pgAdmin data
 echo "Exporting pgAdmin data..."
-docker run --rm -v ${PGADMIN_VOLUME_NAME}:/volume -v $(pwd)/${PGADMIN_EXPORT_DIR}:/backup alpine \
-  sh -c "cd /volume && cp -a . /backup"
+sudo docker cp $PGADMIN_CONTAINER_NAME:/var/lib/pgadmin/. $PGADMIN_EXPORT_DIR
+
+# Change ownership of the copied files and directories
+echo "Changing ownership of exported pgAdmin data..."
+sudo chown -R $(whoami):$(whoami) $PGADMIN_EXPORT_DIR
+
+# Debugging: Check the contents of the export directory
+echo "Checking exported pgAdmin data..."
+ls -l ${PGADMIN_EXPORT_DIR}
 
 echo "PostgreSQL data has been exported to ${PG_EXPORT_DIR}/${PG_EXPORT_FILE}."
 echo "pgAdmin data has been exported to ${PGADMIN_EXPORT_DIR}."
