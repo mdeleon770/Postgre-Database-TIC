@@ -4,14 +4,21 @@
             "extensions": [
                 "dbaeumer.vscode-eslint",
                 "esbenp.prettier-vscode",
-                "pkief.material-icon-theme"
+                "pkief.material-icon-theme",
+                "github.copilot",
+                "christian-kohler.path-intellisense"
+
             ],
             
             "settings": {
                 "terminal.integrated.shell.linux": "/bin/bash",
-                "workbench.colorTheme": "GitHub Dark Dimmed"
+                "workbench.colorTheme": "GitHub Dark Dimmed",
+                "editor.formatOnSave": true,
+                "workbench.iconTheme": "material-icon-theme",
+                "workbench.panel.defaultLocation": "right",
+                "workbench.sideBar.location": "right"
             }
         }
     },
-    "postCreateCommand": "npm install"
+        "postCreateCommand": "./post-create.sh"
 }
