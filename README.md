@@ -52,6 +52,7 @@ El proyecto utiliza las siguientes tecnologías y herramientas:
 - **Faker**: Biblioteca para generar datos de prueba y simulación.
 - **Boom**: Biblioteca para manejar errores HTTP.
 - **Pool**: Para la conexión eficiente a la base de datos PostgreSQL.
+- **Sequelize**: Para comprobación de tipo de datos de los modelos.
 
 
 ### Explicación de la Estructura
@@ -83,3 +84,5 @@ La aplicación estará disponible en `http://localhost:3000` por defecto. Puedes
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
+## Docs
+- [Instalar Insomnia](https://insomnia.rest/download)
