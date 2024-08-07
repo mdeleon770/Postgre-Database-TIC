@@ -3,13 +3,13 @@
 // Importar Sequelize
 const { Sequelize } = require('sequelize');
 
-// Cargar variables de entorno desde el archivo .env
-require('dotenv').config();
+/* // Cargar variables de entorno desde el archivo .env
+require('dotenv').config(); */
 
 // Configurar la conexión a la base de datos con Sequelize
-const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
-  host: process.env.DB_HOST || 'localhost',
-  port: process.env.DB_PORT || 5432,
+const sequelize = new Sequelize('postgres', 'postgres', 'postgres', {
+  host: 'localhost',
+  port: 5432,
   dialect: 'postgres', // Usamos el dialecto de PostgreSQL
   logging: false, // Desactiva el registro de SQL en la consola
   pool: {
