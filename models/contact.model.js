@@ -1,23 +1,14 @@
-// Importar Sequelize y la instancia de conexión
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/sequelize');
+const User = require('./user.model');
 
-// Definir el modelo de contacto
 const Contact = sequelize.define('Contact', {
-  firstName: {
-    type: DataTypes.STRING,
+  userId: {
+    type: DataTypes.INTEGER,
     allowNull: false,
-  },
-  lastName: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  email: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    unique: true,
-    validate: {
-      isEmail: true,
+    references: {
+      model: User,
+      key: 'id',
     },
   },
   phoneNumber: {
@@ -36,5 +27,7 @@ const Contact = sequelize.define('Contact', {
   tableName: 'contacts',
 });
 
-// Exportar el modelo
+User.hasOne(Contact, { foreignKey: 'userId' });
+Contact.belongsTo(User, { foreignKey: 'userId' });
+
 module.exports = Contact;

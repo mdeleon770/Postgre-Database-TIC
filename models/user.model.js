@@ -1,8 +1,6 @@
-// Importar Sequelize y la conexión a la base de datos
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/sequelize');
 
-// Definir el modelo de usuario
 const User = sequelize.define('User', {
   username: {
     type: DataTypes.STRING,
@@ -22,14 +20,25 @@ const User = sequelize.define('User', {
     },
   },
   role: {
-    type: DataTypes.ENUM('admin', 'user', 'guest'),
+    type: DataTypes.ENUM('admin', 'seller', 'user'),
     allowNull: false,
     defaultValue: 'user',
+  },
+  firstName: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  lastName: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  avatar: {
+    type: DataTypes.STRING,
+    allowNull: true,
   },
 }, {
   timestamps: true,
   tableName: 'users',
 });
 
-// Exportar el modelo
 module.exports = User;

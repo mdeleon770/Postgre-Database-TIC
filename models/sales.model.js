@@ -12,6 +12,15 @@ const Sale = sequelize.define('Sale', {
       key: 'id', // Clave foránea que hace referencia al campo 'id' de la tabla 'contacts'
     },
   },
+  saleId: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    unique: true,
+  },
+  productImage: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
   product: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -19,6 +28,10 @@ const Sale = sequelize.define('Sale', {
   amount: {
     type: DataTypes.DECIMAL(10, 2),
     allowNull: false,
+  },
+  notes: {
+    type: DataTypes.TEXT,
+    allowNull: true,
   },
   date: {
     type: DataTypes.DATE,
