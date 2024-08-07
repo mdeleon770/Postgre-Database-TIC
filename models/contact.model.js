@@ -24,7 +24,7 @@ const Contact = sequelize.define('Contact', {
     type: DataTypes.STRING,
     allowNull: true,
     validate: {
-      is: /^\+?[1-9]\d{1,14}$/i,
+      is: /^(?:1-)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}(?:\s*x\d{1,5})?$/i,
     },
   },
   address: {
